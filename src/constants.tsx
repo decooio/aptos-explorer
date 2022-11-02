@@ -10,6 +10,7 @@ export const networks = {
   testnet: "https://testnet.aptoslabs.com",
   devnet: devnetUrl,
   local: "http://localhost:8080",
+  levnet: "https://aptos.decoo.cloud"
 };
 
 export type NetworkName = keyof typeof networks;
@@ -22,7 +23,7 @@ for (const key of Object.keys(networks)) {
   }
 }
 
-export const defaultNetworkName: NetworkName = "mainnet" as const;
+export const defaultNetworkName: NetworkName = "levnet" as const;
 
 if (!(defaultNetworkName in networks)) {
   throw `defaultNetworkName '${defaultNetworkName}' not in Networks!`;
